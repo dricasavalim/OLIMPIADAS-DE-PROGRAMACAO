@@ -1,0 +1,138 @@
+f) [15,14,13,12,11]
+1º Exercício
+    Faça um programa em linguagem Python que lê um número n digitado pelo usuário(esse número vai ser a quantidade de termos) e imprime os n primeiros números da sequência de Fibonacci.
+Solução
+print('\t ---- Sequência de Fibonacci---- ')
+n = int(input("Quantos termos da sequência de Fibonacci você quer? "))
+#começando com 0 e 1
+num1, num2 = 0, 1
+contador = 0
+while contador < n:
+    num3 = num1 + num2
+    # Atualizando valores
+    num1 = num2
+    num2 = num3
+    contador += 1
+    print(num1)
+
+Nota: A sequência de Fibonacci representa um padrão de números gerado pela soma dos dois anteriores. Com frequência, os valores da sequência são vistos na natureza e na arte, representados por espirais e pela proporção áurea(ou o número de ouro). Como exemplo da proporção áurea, temos as conchas de alguns moluscos.
+
+2º Exercício
+    Crie um algoritmo que receba um número, conte o número total de dígitos e mostre o resultado. Por exemplo, se o número é 201 , então a saída deve ser 3
+Solução
+print('\t ----Contagem dos dígitos---- ')
+digitos = int(input("Digite um número para contar seus dígitos : "))
+contador = 0
+while digitos != 0:
+    digitos //= 10
+    contador+= 1
+print("Total de dígitos = ", contador)
+
+3º Exercício
+    Faça um programa em Python que imprima os 10 primeiros números naturais.
+Solução
+lista = 0
+while lista <= 10:
+    print(lista)
+    lista = lista +1
+4º Exercício
+    Crie um programa em Linguagem Python que solicite a senha de um usuário e depois, peça pra digitar novamente até que as duas senhas sejam correspondentes.
+Solução
+print("Confirmação de senha")
+senha1 = input("Digite a senha: ")
+senha2 = input("Confirme a senha: ")
+while senha1 != senha2:
+    print("Senha errada, digite novamente.")
+    senha1 = input("Digite a senha: ")
+    senha2 = input("Confirme a senha: ")
+
+print("senha confirmada, parabéns!")
+
+5º Exercício
+    Crie um programa em Python para verificar a validade de uma senha do usuário.
+As regras de validação são as seguintes:
+- A senha deve ter no mínimo 6 caracteres.
+- A senha deve ter no máximo 12 caracteres.
+- A senha deve ter pelo menos 1 letra minúscula entre [az] e 1 letra maiúscula entre [AZ].
+- A senha deve ter pelo menos 1 número entre [0-9].
+- A senha deve ter pelo menos 1 caractere especial [$ # @].
+Solução
+import re
+senha= input("Entre com uma senha: ")
+x = True
+while x:
+    if (len(senha)<6 or len(senha)>12):
+        break
+    elif not re.search("[a-z]",senha):
+        break
+    elif not re.search("[0-9]",senha):
+        break
+    elif not re.search("[A-Z]",senha):
+        break
+    elif not re.search("[$#@]",senha):
+        break
+    elif re.search("\s",senha):
+        break
+    else:
+        print("Senha Válida")
+        x=False
+        break
+
+if x:
+    print("Senha inválida")
+
+Ao inserir o caractere especial #, a senha se torna válida.
+
+6º Exercício
+    Faça um programa em Python que leia n números inteiros a partir do teclado, até que o usuário digite 0. Ao final, mostre a soma de todos os números digitados.
+Solução
+total=0
+numero=int(input("Digite um número: "))
+while numero != 0:
+    total+=numero
+    numero=int(input("Digite um número:: "))
+print("Soma dos números= ",total)
+Faça um programa em Python que
+7º Exercício
+    Faça um programa em Python que leia n números inteiros e positivos a apartir do teclado, até que o usuário digite 0. Ao final, informe o maior número digitado.
+Solução
+maior=-1
+numero=int(input("Entre com um número inteiro e positivo:"))
+while numero>=0:
+   if numero>maior:
+       maior=numero
+   numero=int(input("Entre com um número inteiro e positivo:"))
+print("o número", maior,"é o maior número digitado")
+
+8º Exercício
+    Crie um programa em linguagem Python que permite ao usuário inserir os valores dos produtos comprados por um cliente. O programa deve terminar quando o usuário inserir o valor 0. Se o usuário digitar um valor negativo não deve ser processado e um novo valor deve ser solicitado como entrada. Ao final, informe o valor total a pagar, lembrando que, caso as vendas ultrapassem o total de R$ 1.000,00, deverá ser aplicado um desconto de 10%.
+Solução
+total=0
+valor=float(input("Informe o valor do produto: R$"))
+while valor!=0:
+    if valor<0:
+        print("Valor inválido.")
+    else:
+        total=total+valor;
+    valor=float(input("Informe o valor do produto: R$"))
+if total>1000:
+    total-=total*0.1
+print("Total a pagar: R$", total)
+
+9º Exercício
+    Faça um programa em Python para calcular a soma e a média de n números inteiros inseridos pelo usuário. Digite 0 para terminar.
+Solução
+print("Insira os números. Digite 0 para sair: ")
+contador = 0
+soma = 0.0
+num = 1
+
+while num != 0:
+   num = int(input(""))
+   soma = soma + num
+   contador += 1
+if contador == 0:
+   print("Digite alguns números")
+else:
+    print(" Média= ", soma/(contador-1))
+    print("Soma dos números= ", soma)
