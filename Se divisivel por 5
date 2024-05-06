@@ -1,0 +1,7 @@
+ Escrever um programa em Python para ler um número inteiro e informar se ele é divisível por 5.
+Solução
+numero=int(input(" Insira um número para verificar: "))
+if (numero % 5 == 0):
+   print("O número ",numero, "é divisível por 5")
+else:
+   print("O número ",numero, "não é divisível por 5")
