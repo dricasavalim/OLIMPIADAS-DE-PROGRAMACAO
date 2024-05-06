@@ -1,0 +1,14 @@
+Faça um programa em que o usuário informe o salário recebido e o total gasto com despesas. Deverá ser exibido na tela “Gastos dentro do orçamento” caso o valor gasto não
+ultrapasse o valor do salário e “Orçamento estourado” se o valor gasto
+ultrapassar o valor do salário.
+
+
+
+
+
+salario_recebido=float(input("\n Informe seu salário: "))
+total=float(input(" Informe o total de seus gastos: "))
+if(salario_recebido>=total):
+   print("-- Gastos dentro do Orçamento")
+else:
+   print("-- Orçamento estourado")
