@@ -1,1 +1,13 @@
+Para realizar a tomada de decisão na Linguagem de Programação Python, usamos a instrução if, junto(ou não) com elif ou  else. O que é o comando if? O if é um comando condicional,ou seja, que serve para executar tarefas com base em condições.
+Atenção: ao implementar o comando if em algum problema, podemos ter zero ou mais partes elif, e a parte else é opcional. Durante os estudos, muitos alunos perguntam o significado de ‘elif’. Pois bem, a palavra-reservada ‘elif’ é uma abreviação para ‘else if’, e é útil para evitar indentação excessiva. Uma sequência if … elif … elif … substitui os comandos switch ou case, encontrados em outras linguagens.
+
+if , if-else, if-elif-else
+
+O if é uma estrutura de condição que permite avaliar uma expressão e, de acordo com seu resultado, executar uma determinada ação.
+if-else: Utilizamos quando é necessário especificar uma alternativa, para o caso de a condição do comando if não ser satisfeita. É como se você estivesse dizendo: se isso acontecer, faça isso, senão...faça aquilo.
+if-elif-else: Utilizamos quando, por algum acaso, existir mais de uma condição alternativa que precisa ser verificada.
+
+Faça as atividades dos arquivos a seguir e envie para 
+email: prof.sandravalim@gmail.com
+assunto olimpiadas de programação 2024
 
