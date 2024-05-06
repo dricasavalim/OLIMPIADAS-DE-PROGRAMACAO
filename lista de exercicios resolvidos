@@ -1,0 +1,92 @@
+10º Exercício
+    Escreva um programa Python para verificar se uma letra do Alfabeto(Abecedário) é uma vogal ou consoante.
+Solução
+letra = input("Digite uma letra do Alfabeto: ")
+if letra in ('a', 'e', 'i', 'o', 'u') :
+   print("%s é uma vogal." % letra)
+else:
+   print("%s é uma consoante." % letra)
+11º Exercício
+    Faça um programa em Python para encontrar a mediana de três valores inseridos pelo usuário.
+Solução
+num1 = float(input("Digite o 1º número: "))
+num2 = float(input("Digite o 2º número: "))
+num3 = float(input("Digite o 3º número: "))
+if num1 > num2:
+    if num1 < num3:
+        mediana = num1
+    elif num2 > num3:
+        mediana = num2
+    else:
+        mediana = num3
+else:
+    if num1 > num3:
+        mediana = num1
+    elif num2< num3:
+        mediana = num2
+    else:
+        mediana = num3
+print("Mediana= ", mediana)
+
+Em estatística, a Mediana representa o valor central de um conjunto de dados. Para encontrar o valor da mediana é necessário colocar os valores em ordem crescente ou decrescente.
+12º Exercício
+    Escreva um programa em Python para calcular o fatorial de qualquer número inteiro.
+Solução
+print("\t Fatorial de um número")
+factorial = 1
+num = int(input("Digite um número para calcular: "))
+if num < 0:
+    print("Não existe fatorial para número negativo")
+elif num == 0:
+    print("O fatorial de 0 é 1")
+else:
+    for i in range(1, num + 1):
+        factorial = factorial * i
+    print("O fatorial de", num, "é", factorial)
+
+13º Exercício
+    Faça um programa em Python para calcular a soma e a média de n números inteiros inseridos pelo usuário. Digite 0 para terminar.
+Solução
+print("Insira os números. Digite 0 para sair: ")
+contador = 0
+soma = 0.0
+num = 1
+
+while num != 0:
+   num = int(input(""))
+   soma = soma + num
+   contador += 1
+if contador == 0:
+   print("Digite alguns números")
+else:
+    print("Soma dos números= ", soma)
+    print("Média= ", soma/(contador-1))
+
+14º Exercício
+    Dada a atual crise hídrica do país, as pessoas começaram a construir reservatórios para armazenar água em suas propriedades. Faça um programa em linguagem Python que auxilie os utilizadores do reservatório a controlarem seu consumo. Obtenha do teclado as dimensões de um reservatório (altura, largura e comprimento, em centímetros) e o consumo médio diário dos utilizadores do reservatório (em litros/dia). 
+Assuma que o reservatório esteja cheio, tenha formato cúbico e informe: 
+(a) A capacidade total do reservatório, em litros; 
+(b) A autonomia do reservatório, em dias; 
+(c) A classificação do consumo, de acordo com a quantidade de dias de autonomia: Consumo elevado, se a autonomia for menor que 2 dias; Consumo moderado, se a autonomia estiver entre 2 e 7 dias; Consumo reduzido, se a autonomia maior que 7 dias. 
+Observação: Considere que cada litro equivale a 1000 cm3 ou 1 dm3 .
+Solução
+print("-- Resevartório de Água --")
+
+altura=float(input(" Digite a altura (cm): "))
+largura=float(input(" Digite a largura (cm): "))
+comprimento=float(input(" Digite o comprimento (cm): "))
+c_diario=float(input("Digite o valor do consumo médio diário(litros/dia)= "))
+
+cap_total=((altura*largura*comprimento)/1000); '''o resultado seria em 
+cm3 por isso, dividimos por mil para passar de cm3 para litros'''
+auton_reser=cap_total/c_diario
+
+print("Capacidade do Reservatório= ",cap_total, "litros ")
+print("Autonomia do reservatório= ",auton_reser," dias")
+'''Agora, vamos classificar o consumo'''
+if(auton_reser<2):
+     print("Consumo Elevado")
+elif(auton_reser>=2 and auton_reser<=7):
+     print("Consumo Moderado")
+elif(auton_reser>7):
+          print("\n Consumo Baixo")
