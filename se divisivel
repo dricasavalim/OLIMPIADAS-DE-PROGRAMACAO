@@ -1,0 +1,20 @@
+import sys; '''estou importando esse módulo para usar a função sys.exit(); '''
+i = float(input(" Insira o valor de i: "))
+'''O programa tem que ler um valor i que seja positivo,ou seja, maior que 
+zero. Por isso, vou colocar um if para mostrar uma mensagem caso o Usuário digite um valor i negativo'''
+if (i <= 0):
+   print("Insira um valor inteiro e positivo: ")
+   sys.exit(); '''para finalizar o programa, caso o usuario digite um número negativo'''
+if (i > 0):  '''Se o Usuário digitar um valor maior que 
+zero, os comandos abaixo serão executados '''
+a = int(input(" Insira o valor de a: "))
+b = int(input(" Insira  o valor de b: "))
+c = int(input(" Insira  o valor de c: "))
+'''Agora que já lemos os valores de i, a, b e c vamos usar um if para saber
+se i é par e um outro if para saber se i é maior que 10 '''
+if ((i % 2) == 0): '''caso i seja par, calcula - se a média aritmética'''
+media_arit = ((a + b + c)/ 3)
+print("Média aritmética: ", media_arit)
+if (i>10):
+   media_pond = ((2 * a + 3 * b + 4 * c) / 9)
+   print("Média ponderada: ", media_pond)
