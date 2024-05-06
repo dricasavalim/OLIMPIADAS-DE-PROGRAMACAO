@@ -1,0 +1,122 @@
+Exercício
+    Faça um programa em linguagem Python que converta metros para centímetros.
+Solução
+print('\t ----Conversão de medida---- ')
+metros = int(input('Informe o valor em metros: '))
+print ('O valor em centimetros é :', metros * 100)
+
+3º Exercício
+    Faça um programa em Python que leia um valor inteiro e mostre a tabuada de 1 a 10 do valor lido.
+Solução
+print('\t ----Tabuada---- ')
+numero = int(input('Informe o numero para ver a tabuada: '))
+
+print('\n Tabuada de', numero, ':')
+
+for i in range(1, 11):
+    print(numero, 'X', i, '=', (numero * i))
+
+4º Exercício
+    Faça um algoritmo em linguagem Python que receba duas notas e calcule a média aritmética e mostre o resultado.
+Solução
+
+print('\t ----Cálculo da média aritmética---- ')
+
+nota1 = int(input('Informe a primeira nota: '))
+nota2 = int(input('Informe a segunda nota: '))
+
+media = (nota1+ nota2)/2
+
+print('Média Aritmética' '=', media)
+
+5º Exercício
+    Fazer um algoritmo que ao receber o salário atual de um funcionário, calcule o valor do novo salário reajustado de acordo com a tabela abaixo:
+Salário atual	Reajuste
+Abaixo de R$500,00	15%
+de R$500,00 até R$1000,00	10%
+Acima de R$1000,00	5%
+Solução
+print('\t ----Cálculo do novo salário ---- ')
+salario_atual = float(input('Informe o salario atual: '))
+
+if (salario_atual<500):
+    salario_novo=salario_atual+(salario_atual*0.15)
+    print('Salario com reajuste' '=', salario_novo)
+
+if ((salario_atual>=500) and (salario_atual <=1000)):
+    salario_novo=salario_atual+(salario_atual*0.10)
+    print('Salario com reajuste' '=', salario_novo)
+
+if (salario_atual>1000):
+    salario_novo=salario_atual+(salario_atual*0.05)
+    print('Salario com reajuste' '=', salario_novo)
+
+6º Exercício
+    Escreva um programa que mostre todos os números entre 5 e 100 que são divisíveis por 7, mas não são múltiplos de 5. Os números obtidos devem ser impressos em sequência.
+Solução
+for num in range(5, 100):
+    if (num % 7 == 0 and num % 5 != 0):
+        print(num)
+Nota: os múltiplos de 5 são: M(5) = {5, 10, 15, 20, 25, 30 , 35, 40, 45, … }
+
+7º Exercício
+    Faça um programa que receba um número digitado pelo usuário e calcule a soma de todos os números de 1 até ao número digitado. Por exemplo, se o usuário digitou o número 4, a saída deve ser 10 (1+2+3+4=10).
+Solução
+soma_numeros = 0
+numero = int(input("Por favor, insira um número: "))
+for i in range(1, numero + 1, 1):
+    soma_numeros += i
+print("A soma é = ", soma_numeros)
+
+8º Exercício
+    Faça um programa que recebendo um valor inteiro, informe se o número é positivo, negativo ou neutro.
+
+Solução
+print('\t ---- A dança dos números---- ')
+x = int(input("Informe um número para brincar: "))
+if x < 0:
+        print('É um número negativo ')
+elif x == 0:
+        print('É um número neutro')
+elif x > 0:
+        print('É um número positivo')
+
+9º Exercício
+    Crie um algoritmo que receba um número, conte o número total de dígitos e mostre o resultado.
+Por exemplo, se o número é 2021 , então a saída deve ser 4
+Solução
+print('\t ----Contagem dos dígitos---- ')
+digitos = int(input("Digite um número para contar seus dígitos : "))
+contador = 0
+while digitos != 0:
+    digitos //= 10
+    contador+= 1
+print("Total de dígitos = ", contador)
+
+10º Exercício
+    Faça um programa em linguagem Python, que lê um número n e imprime os n primeiros números da sequência de Fibonacci.
+Solução
+print('\t ---- Sequência de Fibonacci---- ')
+termos = int(input("Digite a quantidade de termos para calcular : "))
+#começando com 0 e 1
+num1, num2 = 0, 1
+contador = 0
+while contador < termos:
+    num3 = num1 + num2
+    # Atualizando valores
+    num1 = num2
+    num2 = num3
+    contador += 1
+    print(num1)
+Nota: a sequência de Fibonacci representa um padrão de números gerado pela soma dos dois anteriores. Com frequência, os valores da sequência são vistos na natureza e na arte, representados por espirais e pela proporção áurea(ou o número de ouro). Como exemplo da proporção áurea, temos as conchas de alguns moluscos.
+
+11º Exercício
+    Analise o código Python a seguir.
+
+Comente a opção que indica a saída produzida pela execução desse código, aqui nos comentários.
+
+a) -1
+b) [11,12,13,14,15]
+c) [10,11,12,13,14]
+d) 14
+e) 15
