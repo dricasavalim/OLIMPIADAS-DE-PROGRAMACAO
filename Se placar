@@ -1,0 +1,12 @@
+Desenvolva um programa que recebe do usuário o placar de um jogo de futebol (os gols de cada time) e informe se o resultado foi um empate, se a vitória foi do primeiro time ou do segundo time.
+Solução
+print("-- Placar de um jogo de futebol--")
+gols_timeA=int(input(" Digite os gols do time A: "))
+gols_timeB=int(input(" Informe os gols do time B: "))
+
+if(gols_timeA==gols_timeB):
+   print(" o resultado foi um empate")
+elif(gols_timeA>gols_timeB):
+        print(" O time A venceu com show de Messi")
+else:
+        print("O time B venceu com  o frango do Goleiro ")
